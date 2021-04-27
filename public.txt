@@ -1,0 +1,29 @@
+using System;
+
+class X
+{
+    protected int x;
+    public X()
+    {
+        x=10;
+    }
+}
+class Y:X
+{
+    public int getX()
+    {
+        return x;
+    }
+}
+class Program
+{
+    public static void Main() 
+    {
+        X obj1 = new X();
+        Y obj2 = new Y();
+        
+        
+
+        Console.Write("value of x: "+ obj2.getX());
+    }
+}

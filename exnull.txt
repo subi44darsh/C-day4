@@ -1,0 +1,29 @@
+using System;
+
+class MyException:ApplicationException
+{
+    public void objnullException()
+    {
+        Console.WriteLine("Exception Occured, the object is null");
+    }
+}
+ class Class1
+{
+   public static void Main() 
+  {
+        Class1 x = null;
+        
+       
+        try
+        {
+            if(x==null)
+            {
+                throw new MyException();
+            }
+        }
+catch(MyException ex)
+{
+    ex.objnullException();
+}
+  }
+    }

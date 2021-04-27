@@ -1,0 +1,47 @@
+using System;
+
+class Person
+{
+    public int age;
+    public void Greet();
+    {
+        Console.WriteLine("hello");
+    }
+    public void SetAge()
+    {
+        Console.WriteLine("enter the age");
+        age=Convert.ToInt32(Console.ReadLine());
+    }
+    
+}
+
+class Student : Person
+{
+    public void study()
+    {
+        Console.WriteLine("Im studying on the screen"); 
+    }
+     public void age()
+     {
+        Console.WriteLine("My age is "+this.age+"years old"); 
+    } 
+     }
+     class Professor : Person
+     {
+         public void Explain()
+         {
+             Console.WriteLine("Im explaining on the screen"); 
+         }
+         
+     }
+     class StudentProfessortest
+     {
+         public static void Main()
+         {
+             Professor professor= new Professor();
+             professor.SetAge();
+             professor.Greet();
+             professor.Explain();
+         }
+     }
+    

@@ -1,0 +1,55 @@
+using System;
+
+class Product
+{
+    public string productname{get; set;}
+    public double productprice{ get; set;}
+    public double productquantity{ get;set;}
+   
+
+    public  void inputvalues() 
+    {
+       productname=Console.ReadLine();
+       productprice=Convert.ToInt32(Console.ReadLine());
+        productquantity=Convert.ToInt32(Console.ReadLine());
+    }
+}
+    class Invoice:Product 
+    {
+        public void display(Product[]products)
+        {
+        Console.WriteLine("S.no\t productname\t productprice\t productquantity\t total  ");
+       int index=1;
+       foreach(var item in products)
+       {
+        Console.Write(index);
+        Console.Write("\t\t\t");
+        Console.Write(item.productname);
+        Console.Write("\t\t\t\t");
+        Console.Write(item.productprice);
+        Console.Write("\t\t\t\t");
+        Console.Write(item.productquantity);
+        Console.Write("\t\t\t\t\t");
+        Console.Write(item.productquantity*item.productprice);  
+         Console.Write("\n");
+        index=index+1;
+    }
+    }
+    }
+    class user
+    {
+    public static void Main()
+    {
+       Product[] products= new Product[2];
+       for (int i=0; i<products.Length;i++)
+       {
+           Product product=new Product();
+           product.inputvalues();
+           products[i]=product;
+       }
+       Invoice invoice = new Invoice();
+       invoice.display(products);
+        
+    }
+    
+}
